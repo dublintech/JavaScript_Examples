@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.10.0.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="dataAdapter.js"></script>
+</head>
+<body>
+Next up
+- tidy up code.
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="http://code.jquery.com/qunit/qunit-1.10.0.js"></script>
+  <!-- test code-->
+  <script>
+  
+test("test dataAdapter.js", function() {
+   console.log('Testing api data Adapter');
+   var testJSON = {"students":[
+				{"firstName":"Tony", "lastName":"Jones", 
+				"dateOfBirth":"14/07" ,"nationality": "Irish"},
+				{"firstName":"Peter", "lastName":"Murphy",
+				"dataOfBirth":"24/11", "nationality": "Irish"}
+				]};
+   console.log(dublintech);
+   var adapter = dublintech.dataAdapter();
+   var testAdapted = adapter.adaptStudents(testJSON);
+   equal(testAdapted.students.length, 2, "Number of students");
+   // test Tony
+   var testTony = testAdapted.students[0];
+   equal("Tony Jones", testTony.name, "name test");
+   
+   // test Peter
+   var testPeter = testAdapted.students[1];
+   equal("Peter Murphy", testPeter.name, "name test, second element");
+   
+});
+  </script>
+</body>
+</html>
