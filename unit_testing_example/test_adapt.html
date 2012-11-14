@@ -23,7 +23,7 @@ test("test dataAdapter.js", function() {
 				"dataOfBirth":"24/11", "nationality": "Irish"}
 				]};
    console.log(dublintech);
-   var adapter = dublintech.dataAdapter();
+   var adapter = dublintech.dataAdapter;
    var testAdapted = adapter.adaptStudents(testJSON);
    equal(testAdapted.students.length, 2, "Number of students");
    // test Tony

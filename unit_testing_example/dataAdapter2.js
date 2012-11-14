@@ -1,7 +1,7 @@
 var dublintech = dublintech || {};
 
-dublintech.dataAdapter = {
-    adaptStudents : function (data) {
+dublintech.dataAdapter = (function() {		
+	function adaptStudents(data) {
 		var adaptedStudentsVar = {
 			students:[]
 		};
@@ -16,4 +16,8 @@ dublintech.dataAdapter = {
 		});
 		return adaptedStudentsVar;
 	}
-};
+   
+    var that = {};
+	that.adaptStudents = adaptStudents;  
+    return that;
+});
