@@ -1,0 +1,114 @@
+#resultsTable {
+   width:100%;
+   border-collapse:collapse;
+}
+#resultsTable td, #resultsTable th 
+{
+font-size:1em;
+border:1px solid #0066CC;
+padding:3px 7px 2px 7px;
+}
+#resultsTable th 
+{
+font-size:1.1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#A7C942;
+color:#ffffff;
+}
+#resultsTable tr.alt td 
+{
+color:#000000;
+background-color:#e7f4c3;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #669966;
+    cursor: default;
+    font-size: 12px;
+    font-family: Arial, Tahoma;
+}
+.questionContainer {
+    width: 800px;
+    border: 3px double #003366;
+    padding: 3px;
+    margin: 10px;
+}
+ul {
+    margin: 0px;
+    padding: 5px;
+}
+ul li {
+    list-style: none;
+}
+a {
+    border: 1px solid #000;
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 10px;
+    background: #FFF;
+    cursor: pointer;
+}
+a:hover {
+    background: none;
+}
+.btnContainer {
+    width: 96%;
+    margin: 10px 0px 10px 2%;
+}
+#progressKeeper {
+    width: 800px;
+    height: 25px;
+    border: 3px double #003366;
+    margin: 0px 10px;
+    padding: 3px;
+}
+#txtStatusBar {
+    margin: 5px 10px;
+    font-weight: bold;
+}
+#progress {
+    background: green;
+    width: 0;
+    height: 25px;
+}
+.radius {
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+#resultKeeper {
+    width: 800px;
+    margin: 10px;
+    padding: 3px;
+    border: 3px double #003366;
+	background:#66CC66;
+}
+#resultKeeper div {
+    line-height: 20px;
+}
+.totalScore {
+    font-weight: bold;
+	padding:10px;
+}
+input {
+    position: relative;
+    top: 2px;
+}
+h1 {
+    border-bottom: 1px solid #003366;
+    font-size: 16px;
+    height: 22px;
+    margin: 10px;
+    text-indent: 5px;
+}
+.prev { float: left; }  /** elements after a float will flow around it **/
+.next, .btnShowResult { float: right; }
+.clear { clear: both; }    /** no floats allowed left or right **/
+.hide { display: none; } 
+
