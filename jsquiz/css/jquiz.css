@@ -19,7 +19,6 @@ color:#ffffff;
 }
 #resultsTable tr.alt td 
 {
-color:#000000;
 background-color:#e7f4c3;
 }
 
@@ -111,4 +110,6 @@ h1 {
 .next, .btnShowResult { float: right; }
 .clear { clear: both; }    /** no floats allowed left or right **/
 .hide { display: none; } 
-
+.resultlist  li.altli{background:#CCFFAA;}
+.resultlist li {background: #BBEEAA;}
+#resultsTable td.fail{color:red;}
