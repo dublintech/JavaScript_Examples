@@ -32,7 +32,7 @@ body{
     font-family: Arial, Tahoma;
 }
 .questionContainer {
-    width: 800px;
+    width: 700px;
     border: 3px double #003366;
     padding: 3px;
     margin: 10px;
@@ -44,7 +44,7 @@ ul {
 ul li {
     list-style: none;
 }
-a {
+a.pretty {
     border: 1px solid #000;
     padding: 2px 5px;
     font-weight: bold;
@@ -52,7 +52,7 @@ a {
     background: #FFF;
     cursor: pointer;
 }
-a:hover {
+a.pretty:hover {
     background: none;
 }
 .btnContainer {
@@ -60,7 +60,7 @@ a:hover {
     margin: 10px 0px 10px 2%;
 }
 #progressKeeper {
-    width: 800px;
+    width: 700px;
     height: 25px;
     border: 3px double #003366;
     margin: 0px 10px;
@@ -82,7 +82,7 @@ a:hover {
     -o-border-radius: 6px;
 }
 #resultKeeper {
-    width: 800px;
+    width: 700px;
     margin: 10px;
     padding: 3px;
     border: 3px double #003366;
