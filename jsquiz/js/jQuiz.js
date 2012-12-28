@@ -50,17 +50,17 @@ var quizModule = function (questionAnswers, divMarker) {
 			returnString.push('<div class="btnContainer">');
             returnString.push('<div class="prev">');
 			if (i > 0) {
-				returnString.push('<a class="btnPrev">&lt;&lt; Prev</a>');
+				returnString.push('<a class="btnPrev pretty">&lt;&lt; Prev</a>');
 			}
             returnString.push('</div>');               			// end prev div
 			// Is it the last? 
 			if (i === (questionAnswers.questions.length - 1)) { 
 			    returnString.push('<div class="next">');
-                returnString.push('<a class="btnShowResult">Finish!</a>');
+                returnString.push('<a class="btnShowResult pretty">Finish!</a>');
 				returnString.push('</div>');
 			} else {
 				returnString.push('<div class="next">');
-				returnString.push('<a class="btnNext">Next &gt;&gt;</a>');
+				returnString.push('<a class="btnNext pretty">Next &gt;&gt;</a>');
 				returnString.push('</div>');               			// end  next div
 			}
             returnString.push('<div class="clear"></div>');  	// begin / end clear div
@@ -198,13 +198,13 @@ var quizModule = function (questionAnswers, divMarker) {
 			} else {
 				resultSet += '<tr class="alt">';
 			}
-			resultSet += '<td>' + i + '</td><td>' + quizQuestions.questions[i].question + '</td><td>' + userAnswer + '</td><td>' +
+			resultSet += '<td>' + (i + 1) + '</td><td>' + quizQuestions.questions[i].question + '</td><td>' + userAnswer + '</td><td>' +
 				                correctAnswer + '</td>' +
 								passFailCell + '</tr>';
 		}
 		resultSet += '</table>';
-		resultSet += '<div class="totalScore">Your total score is ' + trueCount * (100 / quizQuestions.questions.length) + '!</div>'
-		resultSet += '<div><I>Refresh page to try again</I></div>';
+		resultSet += '<div class="totalScore">Your total score is ' + trueCount * (100 / quizQuestions.questions.length) + '% !</div>'
+		resultSet += '<div><I>Refresh page to go again</I></div>';
 		$('#resultKeeper').html(resultSet).show();
 	}
 	
