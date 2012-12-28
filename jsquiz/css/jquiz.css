@@ -23,7 +23,7 @@ background-color:#e7f4c3;
 }
 
 
-body{
+body.quiz{
     margin: 0px;
     padding: 0px;
     background: #669966;
@@ -99,7 +99,7 @@ input {
     position: relative;
     top: 2px;
 }
-h1 {
+h1.quiz {
     border-bottom: 1px solid #003366;
     font-size: 16px;
     height: 22px;
