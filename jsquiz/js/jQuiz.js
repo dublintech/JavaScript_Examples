@@ -167,14 +167,14 @@ var quizModule = function (questionAnswers, divMarker) {
 				userAnswer += '<UL class="resultlist">';
 				for ( var j = 0; j < userAnswerIndexes.length; j++) {
 					if ((j % 2) === 0) {
-						userAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[j] + '</LI>';
+						userAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[userAnswerIndexes[j]] + '</LI>';
 					} else {
-						userAnswer += '<LI>' + quizQuestions.questions[i].answers[j] + '</LI>';
+						userAnswer += '<LI>' + quizQuestions.questions[i].answers[userAnswerIndexes[0]] + '</LI>';
 					}
 				}
 				userAnswer += '</UL>';
 			} else {
-			    userAnswer += quizQuestions.questions[i].answers[j]
+			    userAnswer += quizQuestions.questions[i].answers[userAnswersMap[0]]
 			}
 			
 			var correctAnswerIndexes = quizQuestions.questions[i].correct_answer.split(',');
@@ -183,14 +183,14 @@ var quizModule = function (questionAnswers, divMarker) {
 				correctAnswer += '<UL class="resultlist">';
 				for ( var j = 0; j < correctAnswerIndexes.length; j++) {
 					if ((j % 2) === 0) {
-						correctAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[j] + '</LI>';
+						correctAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[correctAnswerIndexes[j]] + '</LI>';
 					} else {
-						correctAnswer += '<LI>' + quizQuestions.questions[i].answers[j] + '</LI>';
+						correctAnswer += '<LI>' + quizQuestions.questions[i].answers[correctAnswerIndexes[0]] + '</LI>';
 					}
 				}
 				correctAnswer += '</UL>';
 			} else {
-			    correctAnswer += quizQuestions.questions[i].answers[j]
+			    correctAnswer += quizQuestions.questions[i].answers[correctAnswerIndexes[0]]
 			}
  
 			if ((i % 2) === 0) { 
@@ -198,13 +198,13 @@ var quizModule = function (questionAnswers, divMarker) {
 			} else {
 				resultSet += '<tr class="alt">';
 			}
-			resultSet += '<td>' + (i + 1) + '</td><td>' + quizQuestions.questions[i].question + '</td><td>' + userAnswer + '</td><td>' +
+			resultSet += '<td>' + i + '</td><td>' + quizQuestions.questions[i].question + '</td><td>' + userAnswer + '</td><td>' +
 				                correctAnswer + '</td>' +
 								passFailCell + '</tr>';
 		}
 		resultSet += '</table>';
-		resultSet += '<div class="totalScore">Your total score is ' + trueCount * (100 / quizQuestions.questions.length) + '% !</div>'
-		resultSet += '<div><I>Refresh page to go again</I></div>';
+		resultSet += '<div class="totalScore">Your total score is ' + trueCount * (100 / quizQuestions.questions.length) + '!</div>'
+		resultSet += '<div><I>Refresh page to try again</I></div>';
 		$('#resultKeeper').html(resultSet).show();
 	}
 	
