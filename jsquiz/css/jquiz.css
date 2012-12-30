@@ -37,11 +37,11 @@ body.quiz{
     padding: 3px;
     margin: 10px;
 }
-ul {
+ul.quizlist {
     margin: 0px;
     padding: 5px;
 }
-ul li {
+ul.quizlist li {
     list-style: none;
 }
 a.pretty {
