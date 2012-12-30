@@ -164,7 +164,7 @@ var quizModule = function (questionAnswers, divMarker) {
 			var userAnswer = '';
 			
 			if (userAnswerIndexes.length > 1) {
-				userAnswer += '<UL class="resultlist">';
+				userAnswer += '<UL class="resultlist quizlist">';
 				for ( var j = 0; j < userAnswerIndexes.length; j++) {
 					if ((j % 2) === 0) {
 						userAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[userAnswerIndexes[j]] + '</LI>';
@@ -180,7 +180,7 @@ var quizModule = function (questionAnswers, divMarker) {
 			var correctAnswerIndexes = quizQuestions.questions[i].correct_answer.split(',');
 			var correctAnswer = '';
 			if (correctAnswerIndexes.length > 1) {
-				correctAnswer += '<UL class="resultlist">';
+				correctAnswer += '<UL class="resultlist quizlist">';
 				for ( var j = 0; j < correctAnswerIndexes.length; j++) {
 					if ((j % 2) === 0) {
 						correctAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[correctAnswerIndexes[j]] + '</LI>';
