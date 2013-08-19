@@ -1,6 +1,6 @@
 var quizModule = function (questionAnswers, divMarker) {
 
-    // Get the HTML for the quiz now.
+    // Get the HTML for the quiz now ok.
 	var quizHTML = createQuizHTML(questionAnswers);
 	
 	// update dom
