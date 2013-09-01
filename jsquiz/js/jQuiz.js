@@ -169,7 +169,7 @@ var quizModule = function (questionAnswers, divMarker) {
 					if ((j % 2) === 0) {
 						userAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[userAnswerIndexes[j]] + '</LI>';
 					} else {
-						userAnswer += '<LI>' + quizQuestions.questions[i].answers[userAnswerIndexes[j]] + '</LI>';
+						userAnswer += '<LI>' + quizQuestions.questions[i].answers[userAnswerIndexes[0]] + '</LI>';
 					}
 				}
 				userAnswer += '</UL>';
@@ -185,7 +185,7 @@ var quizModule = function (questionAnswers, divMarker) {
 					if ((j % 2) === 0) {
 						correctAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[correctAnswerIndexes[j]] + '</LI>';
 					} else {
-						correctAnswer += '<LI>' + quizQuestions.questions[i].answers[correctAnswerIndexes[j]] + '</LI>';
+						correctAnswer += '<LI>' + quizQuestions.questions[i].answers[correctAnswerIndexes[0]] + '</LI>';
 					}
 				}
 				correctAnswer += '</UL>';
