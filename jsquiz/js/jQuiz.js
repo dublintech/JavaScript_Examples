@@ -169,12 +169,12 @@ var quizModule = function (questionAnswers, divMarker) {
 					if ((j % 2) === 0) {
 						userAnswer += '<LI class="altli">' + quizQuestions.questions[i].answers[userAnswerIndexes[j]] + '</LI>';
 					} else {
-						userAnswer += '<LI>' + quizQuestions.questions[i].answers[userAnswerIndexes[0]] + '</LI>';
+						userAnswer += '<LI>' + quizQuestions.questions[i].answers[userAnswerIndexes[j]] + '</LI>';
 					}
 				}
 				userAnswer += '</UL>';
 			} else {
-			    userAnswer += quizQuestions.questions[i].answers[userAnswersMap[0]]
+			    userAnswer += quizQuestions.questions[i].answers[userAnswerIndexes[0]]
 			}
 			
 			var correctAnswerIndexes = quizQuestions.questions[i].correct_answer.split(',');
